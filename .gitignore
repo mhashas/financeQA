@@ -1,0 +1,12 @@
+.env
+env
+
+*.pyc
+build/
+*.egg-info
+**/.DS_Store
+
+SYSTEM_DESIGN.md
+data/*
+storage/*
+

@@ -1,0 +1,37 @@
+{
+  "editor.rulers": [
+    120
+  ],
+  "editor.formatOnSave": true,
+  "autoDocstring.docstringFormat": "google-notypes",
+  "python.languageServer": "None",
+  "python.testing.unittestEnabled": false,
+  // linting
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.enable": true,
+  "ruff.lint.run": "onSave",
+  "ruff.lint.args": [
+    "--config",
+    "pyproject.toml"
+  ],
+  "ruff.organizeImports": false, // we use isort for this
+  // black + isort
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "isort.args": [
+    "--settings-path",
+    "./pyproject.toml"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/env/**": true,
+  },
+}

@@ -1,0 +1,18 @@
+fastapi==0.115.6
+langchain_core==0.3.29
+langchain_chroma==0.2.0
+langchain_huggingface==0.1.2
+sentence-transformers==3.3.1
+langchain-text-splitters==0.3.5
+PyMuPDF==1.25.1
+pymupdf4llm==0.0.17 
+pandas==2.2.3
+pydantic-settings==2.7.1
+click==8.1.8 
+tqdm==4.67.1 
+openai==1.59.6
+pytest==8.3.4
+imagehash==4.3.1
+ultralyticsplus==0.1.0
+langchain_core==0.3.29
+-e .

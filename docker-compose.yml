@@ -1,0 +1,23 @@
+version: '3.9'
+
+networks:
+  net:
+    driver: bridge
+
+
+services:
+
+  chromadb:
+    image: chromadb/chroma:0.6.2
+    volumes:
+      - ${CHROMA_DB_PATH}:/chromadb/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=${CHROMA_DB_PATH}
+      - ANONYMIZED_TELEMETRY=${ANONYMIZED_TELEMETRY:-TRUE}
+      - CHROMA_SERVER_AUTHN_CREDENTIALS=${CHROMA_DB_TOKEN}
+      - CHROMA_SERVER_AUTHN_PROVIDER=chromadb.auth.token_authn.TokenAuthenticationServerProvider
+    ports:
+      - ${CHROMA_DB_PORT}:8000
+    networks:
+      - net
